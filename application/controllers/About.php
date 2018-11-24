@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class About extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		
@@ -9,10 +9,9 @@ class Home extends CI_Controller {
 	}
 	public function index()
 	{
-		$data['title'] = 'Trang chủ';
-		$data['slide'] = 'home/slide';
+		$data['title'] = 'Về chúng tôi';
 		
-		$data['content'] = 'home/home';
+		$data['content'] = 'about';
 		$this->load->view('index', $data);
 	}
 }
