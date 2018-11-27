@@ -29,6 +29,8 @@ class Login extends CI_Controller {
 				if(!empty($check))
 				{
 					$this->session->set_userdata("admin_id", $check['id']);
+					$this->session->set_userdata("username", $check['username']);
+					$this->session->set_userdata("name", $check['name']);
 					redirect(base_url('admin'));
 				}
 				else
@@ -43,6 +45,8 @@ class Login extends CI_Controller {
 	public function dangxuat()
 	{
 		$this->session->unset_userdata("admin_id");
+		$this->session->unset_userdata("username");
+		$this->session->unset_userdata("name");
 		redirect(base_url('admin/login'));
 	}
 }
